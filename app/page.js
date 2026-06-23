@@ -72,10 +72,10 @@ export default function HomePage() {
           aria-hidden="true"
         />
 
-        <div style={{ width: '100%' }}>
-          <div className="hero-content">
+        <div className="container grid-2" style={{ alignItems: 'center', position: 'relative', zIndex: 2 }}>
+          <div className="hero-content" style={{ textAlign: 'left', padding: 0, margin: 0 }}>
             {/* Eyebrow */}
-            <div className="hero-eyebrow animate-fade-in">
+            <div className="hero-eyebrow animate-fade-in" style={{ margin: '0 0 var(--space-6) 0' }}>
               ✨ Handcrafted with heart · by a young creator
             </div>
 
@@ -89,12 +89,12 @@ export default function HomePage() {
             </h1>
 
             {/* Subtitle */}
-            <p className="hero-subtitle animate-fade-up delay-200">
+            <p className="hero-subtitle animate-fade-up delay-200" style={{ margin: '0 0 var(--space-8) 0' }}>
               Bookmarks, keychains, stickers, and coloring pages — each one designed with love and made for the moments that matter most.
             </p>
 
             {/* CTA */}
-            <div className="hero-actions animate-fade-up delay-300">
+            <div className="hero-actions animate-fade-up delay-300" style={{ justifyContent: 'flex-start' }}>
               <Link href="/shop" className="btn btn-primary btn-lg" id="hero-shop-btn">
                 Shop the Collection
               </Link>
@@ -107,15 +107,14 @@ export default function HomePage() {
           {/* Hero image */}
           <div
             className="hero-image-strip animate-fade-up delay-400"
-            style={{ maxWidth: 900, margin: 'var(--space-12) auto 0', position: 'relative' }}
+            style={{ margin: 0, position: 'relative', aspectRatio: '4/3' }}
           >
             <Image
               src="/images/hero.png"
-              alt="A Rae of Light product flatlay — bookmarks, keychains, stickers and coloring pages on a cream background"
-              width={900}
-              height={506}
+              alt="A Rae of Light product flatlay"
+              fill
               priority
-              style={{ borderRadius: 'var(--radius-xl)', width: '100%', height: 'auto' }}
+              style={{ borderRadius: 'var(--radius-xl)', objectFit: 'cover' }}
             />
 
             {/* Trust badges */}
